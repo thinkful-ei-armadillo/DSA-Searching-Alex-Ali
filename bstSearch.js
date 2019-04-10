@@ -357,6 +357,4 @@ function main() {
   // console.log(sameBSTs([3, 5, 4, 6, 1, 0, 2],[3, 1, 5, 2, 4, 6, 0]));
 }
 
-main();
-
 module.exports = { BinarySearchTree };

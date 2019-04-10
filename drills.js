@@ -30,3 +30,46 @@ function findBookByDewey(library, dewey, title) {
     return item;
   }
 }
+
+function findMaxProfit(arr) {
+  let max = 0;
+  for (let i = 0; i < arr.length -2; i++) {
+    if (arr[i+1]-arr[i] > max) {
+      max = arr[i+1]-arr[i];
+    }
+  }
+  return max;
+}
+
+// console.log(findMaxProfit([128, 97, 121, 123, 98, 97, 105]));
+
+
+//assumes 100 floors
+function eggDrop(eggBreaksOn) {
+  const start = 14;
+  let floor = 14; //taken from http://datagenetics.com/blog/july22012/index.html
+  let i = 0;
+
+  let egg1 = true;
+  let egg2 = true;
+
+  //get last before the first egg breaks;
+  while (egg1) {
+    i++;
+    if ((floor + (start - i)) >= eggBreaksOn) {
+      egg1 = false;
+    } else {
+      floor = floor + (start - i);
+    }
+  }
+  while (egg2) {
+    floor++;
+    if (floor >= eggBreaksOn) {
+      egg2 = false;
+    }
+  }
+  console.log(floor-1);
+}
+
+eggDrop(100);
+// 14 + 13 + 12 + 11 + 10 + 9 ...
