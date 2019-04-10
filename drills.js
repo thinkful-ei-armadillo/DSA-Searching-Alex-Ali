@@ -5,7 +5,7 @@
 // grab [3,5,6,8,11]
 // 6
 // grab [8,11]
-// 8 
+// 8
 
 // 3 steps
 
@@ -20,3 +20,13 @@
 // no 16 so return -1.
 // 4 steps.
 
+// Find a book
+
+function findBookByDewey(library, dewey, title) {
+  for (const key in Object.entries) {
+    if (dewey == key) {
+      library.dewey.find(item => item.includes(title));
+    }
+    return item;
+  }
+}
